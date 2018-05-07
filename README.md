@@ -1,10 +1,10 @@
 # Java 8 - A step towards functional programming
 Exploring Java 8 Features
 
-#####  Setup Instructions :
+####  Setup Instructions :
 _Lombok Setup_
 * [STS/Eclipse](https://projectlombok.org/setup/eclipse)
 * [IntelliJ IDEA](https://projectlombok.org/setup/intellij)
 
-#####Links to Exercises :
+#### Links to Exercises :
 * [Session 1 : Behavior Parameterization](https://github.com/MyronRogtao/java8features/blob/master/exercise/Session1.md)
