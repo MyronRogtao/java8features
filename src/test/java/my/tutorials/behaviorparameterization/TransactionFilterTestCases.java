@@ -3,6 +3,7 @@ package my.tutorials.behaviorparameterization;
 import my.tutorials.behaviorparameterization.model.Transaction;
 import my.tutorials.behaviorparameterization.stratergy.filter.transaction.FilterByAmountCreditAndSource;
 import my.tutorials.behaviorparameterization.stratergy.filter.transaction.TransactionPredicate;
+import my.tutorials.helper.DataHelper;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,6 @@ import java.util.List;
 
 import static my.tutorials.behaviorparameterization.helper.TransactionHelper.*;
 import static my.tutorials.behaviorparameterization.model.TxnType.CREDIT;
-import static my.tutorials.behaviorparameterization.model.TxnType.DEBIT;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TransactionFilterTestCases {
@@ -21,7 +21,7 @@ public class TransactionFilterTestCases {
     @Before
     public void init() {
         //Given : List of Transactions
-        initTransactions();
+        transactionList = DataHelper.initTransactions();
     }
 
     @Test
@@ -95,18 +95,5 @@ public class TransactionFilterTestCases {
             assertThat(filteredTransaction.getAmount()).isGreaterThan(3000d);
             assertThat(filteredTransaction.getDestination()).isEqualToIgnoringCase("Y");
         }
-    }
-
-    private void initTransactions() {
-        transactionList.add(new Transaction(CREDIT, "X", "Y", 30000d));
-        transactionList.add(new Transaction(DEBIT, "X", "Y", 1000d));
-        transactionList.add(new Transaction(DEBIT, "Z", "A", 2000d));
-        transactionList.add(new Transaction(CREDIT, "A", "B", 40000d));
-        transactionList.add(new Transaction(CREDIT, "X", "Z", 10000d));
-        transactionList.add(new Transaction(CREDIT, "X", "A", 300d));
-        transactionList.add(new Transaction(CREDIT, "X", "Y", 50000d));
-        transactionList.add(new Transaction(DEBIT, "B", "C", 2300d));
-        transactionList.add(new Transaction(CREDIT, "C", "B", 22000d));
-        transactionList.add(new Transaction(DEBIT, "A", "Z", 300d));
     }
 }
