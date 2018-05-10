@@ -1,4 +1,4 @@
-package my.tutorials.behaviorparameterization.model;
+package my.tutorials.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

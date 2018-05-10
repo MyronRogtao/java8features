@@ -1,7 +1,6 @@
 package my.tutorials.behaviorparameterization.stratergy.filter.transaction;
 
-import my.tutorials.behaviorparameterization.model.Transaction;
-import my.tutorials.behaviorparameterization.stratergy.filter.transaction.TransactionPredicate;
+import my.tutorials.model.Transaction;
 
 public class FilterByAmount implements TransactionPredicate {
 

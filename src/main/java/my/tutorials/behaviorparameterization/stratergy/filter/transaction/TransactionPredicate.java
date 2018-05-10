@@ -1,6 +1,6 @@
 package my.tutorials.behaviorparameterization.stratergy.filter.transaction;
 
-import my.tutorials.behaviorparameterization.model.Transaction;
+import my.tutorials.model.Transaction;
 
 public interface TransactionPredicate {
 

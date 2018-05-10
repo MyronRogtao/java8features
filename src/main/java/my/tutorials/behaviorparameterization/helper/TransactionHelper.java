@@ -1,10 +1,12 @@
 package my.tutorials.behaviorparameterization.helper;
 
-import my.tutorials.behaviorparameterization.model.Transaction;
-import my.tutorials.behaviorparameterization.model.TxnType;
+
 import my.tutorials.behaviorparameterization.stratergy.filter.transaction.TransactionPredicate;
+import my.tutorials.model.Transaction;
+import my.tutorials.model.TxnType;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class TransactionHelper {
@@ -69,5 +71,11 @@ public class TransactionHelper {
             }
         }
         return filteredTransactions;
+    }
+
+    //List of Transactions to be sorted based on different comparison logic specified by the comparator
+    public static List<Transaction> sortTransactions(List<Transaction> transactions, Comparator<Transaction> comparator) {
+        transactions.sort(comparator);
+        return transactions;
     }
 }
