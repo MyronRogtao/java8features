@@ -1,6 +1,6 @@
 package my.tutorials.behaviorparameterization.helper;
 
-import my.tutorials.behaviorparameterization.stratergy.filter.generic.Predicate;
+import my.tutorials.behaviorparameterization.stratergy.generic.Predicate;
 
 import java.util.ArrayList;
 import java.util.List;

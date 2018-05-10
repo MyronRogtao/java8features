@@ -1,10 +1,10 @@
 package my.tutorials.behaviorparameterization;
 
 import my.tutorials.behaviorparameterization.helper.GenericHelper;
-import my.tutorials.behaviorparameterization.model.Person;
-import my.tutorials.behaviorparameterization.model.Transaction;
-import my.tutorials.behaviorparameterization.stratergy.filter.generic.Predicate;
+import my.tutorials.behaviorparameterization.stratergy.generic.Predicate;
+import my.tutorials.model.Person;
 import my.tutorials.helper.DataHelper;
+import my.tutorials.model.Transaction;
 import org.junit.Before;
 import org.junit.Test;
 

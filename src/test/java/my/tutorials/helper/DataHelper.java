@@ -1,13 +1,13 @@
 package my.tutorials.helper;
 
-import my.tutorials.behaviorparameterization.model.Person;
-import my.tutorials.behaviorparameterization.model.Transaction;
+import my.tutorials.model.Person;
+import my.tutorials.model.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static my.tutorials.behaviorparameterization.model.TxnType.CREDIT;
-import static my.tutorials.behaviorparameterization.model.TxnType.DEBIT;
+import static my.tutorials.model.TxnType.CREDIT;
+import static my.tutorials.model.TxnType.DEBIT;
 
 public class DataHelper {
 

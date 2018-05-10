@@ -1,7 +1,7 @@
 package my.tutorials.behaviorparameterization.stratergy.filter.transaction;
 
-import my.tutorials.behaviorparameterization.model.Transaction;
-import my.tutorials.behaviorparameterization.model.TxnType;
+import my.tutorials.model.Transaction;
+import my.tutorials.model.TxnType;
 import my.tutorials.behaviorparameterization.stratergy.filter.transaction.TransactionPredicate;
 
 public class FilterByAmountCreditAndSource implements TransactionPredicate {

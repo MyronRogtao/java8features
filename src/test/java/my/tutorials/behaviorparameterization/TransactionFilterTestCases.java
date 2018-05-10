@@ -1,6 +1,7 @@
 package my.tutorials.behaviorparameterization;
 
-import my.tutorials.behaviorparameterization.model.Transaction;
+import my.tutorials.behaviorparameterization.stratergy.filter.transaction.FilterByAmount;
+import my.tutorials.model.Transaction;
 import my.tutorials.behaviorparameterization.stratergy.filter.transaction.FilterByAmountCreditAndSource;
 import my.tutorials.behaviorparameterization.stratergy.filter.transaction.TransactionPredicate;
 import my.tutorials.helper.DataHelper;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static my.tutorials.behaviorparameterization.helper.TransactionHelper.*;
-import static my.tutorials.behaviorparameterization.model.TxnType.CREDIT;
+import static my.tutorials.model.TxnType.CREDIT;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TransactionFilterTestCases {
@@ -71,9 +72,22 @@ public class TransactionFilterTestCases {
     }
 
     @Test
+    public void filterByAmountPredicate() {
+        //When : Filter Transactions whose amount is greater than 2000 units
+        List<Transaction> filteredTransactions = filterTransactionByPredicate(transactionList, new FilterByAmount());
+
+        //Then : Transactions greater than 2000 units are made available
+        for (Transaction filteredTransaction : filteredTransactions) {
+            assertThat(filteredTransaction.getAmount()).isGreaterThan(2000d);
+        }
+    }
+
+    @Test
     public void filterByPredicate() {
+        //When : Filter Credit type Transactions whose amount is greater than 2000 units and carried out by X
         List<Transaction> filteredTransactions = filterTransactionByPredicate(transactionList, new FilterByAmountCreditAndSource());
 
+        //Then : Transactions greater than 2000, of type CREDIT, carried out by X are made available
         for (Transaction filteredTransaction : filteredTransactions) {
             assertThat(filteredTransaction.getAmount()).isGreaterThan(2000d);
             assertThat(filteredTransaction.getType()).isEqualTo(CREDIT);
