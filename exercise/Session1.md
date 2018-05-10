@@ -7,7 +7,7 @@ Consider a Person entity :
       private int age;
     }
 ````
-Refer : [Person.java](https://github.com/MyronRogtao/java8features/blob/master/src/main/java/my/tutorials/behaviorparameterization/model/Person.java)
+Refer : [Person.java](https://github.com/MyronRogtao/java8features/blob/master/src/main/java/my/tutorials/model/Person.java)
 
 ___
 #### Requirement 1: (Write a standalone function)
