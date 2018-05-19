@@ -13,6 +13,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "\nTransaction(type = "+ type.name() +", source = "+ source +", destination = "+ destination +", amount = "+ amount +")";
+        return "Transaction(type = "+ type.name() +", source = "+ source +", destination = "+ destination +", amount = "+ amount +")";
     }
 }
