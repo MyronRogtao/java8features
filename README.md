@@ -9,3 +9,4 @@ _Lombok Setup_
 #### Links to Exercises :
 * [Session 1 : Behavior Parameterization](https://github.com/MyronRogtao/java8features/blob/master/exercise/Session1.md)
 * [Session 2 : Behavior Parameterization Extended](https://github.com/MyronRogtao/java8features/blob/master/exercise/Session2.md)
+* [Session 3 : Functional Interfaces and Lambdas](https://github.com/MyronRogtao/java8features/blob/master/exercise/Session3.md)
